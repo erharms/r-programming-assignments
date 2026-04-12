@@ -1,0 +1,29 @@
+---
+title: "My R Markdown Primer"
+author: "Eddie Harms"
+date: "2026-04-12"
+output: html_document
+---
+
+## R Markdown
+
+R Markdown is a way to author a document that combines text, code, and the results in one place. It allows for everything to be in one output and helps to ensure reports match accross all tables, plots, and numbers. 
+
+A major benefit to R Markdown is that it makes the work much easier to review/revise. Because it will update any changes each time a markdown is re-knit, it allows for less copy/pate errors and less errors between authors. 
+
+R Markdown supports LaTeX-style math expressions. For example, here is an inline expression:  
+$\alpha + \beta = \gamma$.
+And here is a displayed equation:
+$$
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
+$$
+The equation above defines the sample mean $\bar{x}$ as the sum of observations divided by the sample size $n$.
+
+
+```{r setup, message=FALSE}
+library(ggplot2)
+data(mtcars)
+str(mtcars)
+```
+
+I find using markdown to be easier than plain reports because it makes it easier to find everything. Instead of having to make sure to add everything to one place, I can just make sure to save one document. 
